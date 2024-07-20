@@ -28,7 +28,7 @@ PS: Não pode sequência (ex: 111.111.111-11)
 
 
 let cpfParaValidar = '070.987.720-03';              //Input
-validaCpf(cpfParaValidar);
+validaCpf(cpfParaValidar); 
 
 
 
@@ -37,7 +37,7 @@ function validaCpf(cpfParaValidar){
     // Manipulação dos dados de entrada + validação básica
     let cpfNum = cpfParaValidar.replace(/\D/g, '');     //ReEx pra selecionar apenas números
     validaTamanho(cpfNum);                              //Valida tamanho do CPF (evitar vulnerabilidade do zero a esquerda)
-    validaSequencia(cpfNum);                            //Vaçida se o cpf não foi uma sequ~encia (ex: 111.111.111-11)
+    validaSequencia(cpfNum);                            //Valida se o cpf não foi uma sequência (ex: 111.111.111-11)
     let cpf = cpfNum.slice(0,-2);                       //Deleta os últimos 2 números do CPF
     let cpfArray = cpf.split('');                       //Divide a String num array contando uma letra em cada posição
 
