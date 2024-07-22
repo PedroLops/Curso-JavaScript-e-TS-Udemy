@@ -12,22 +12,30 @@
             <h1>Formulário de Cadastro</h1>
             <form id="formulario">
               <label for="inputNome">Nome:</label>
-              <input id="inputNome" type="text">
+              <input id="inputNome" class="validar" type="text">
 
               <label for="inputSobrenome">Sobrenome:</label>
-              <input id="inputSobrenome" type="text">
+              <input id="inputSobrenome" class="validar" type="text">
 
               <label for="inputCpf">CPF:</label>
-              <input id="inputCpf" type="text">
+              <input id="inputCpf" class="validar" type="text">
 
               <label for="inputUsuario">Nome de usuário:</label>
-              <input id="inputUsuario" type="text">
+              <input id="inputUsuario" class="validar" type="text">
+
+              <label for="inputSenha">Senha:</label>
+              <input id="inputSenha" class="validar" type="password">
+
+              <label for="inputConfirmarSenha">Confirmar Senha:</label>
+              <input id="inputConfirmarSenha" class="validar" type="password">
+
 
               <button type="submit">Enviar</button>
 
             </form>
           </section>
 
+        <script src="./assets/js/validaCPF.js"></script>
         <script src="./assets/js/main.js"></script>
     </body>
 </html>

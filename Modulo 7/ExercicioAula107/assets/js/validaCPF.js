@@ -3,16 +3,17 @@ class ValidaCpf {
         this.cpf = cpfEnviado.replace(/\D/g, '')
     }
 
-    chamaValidação(){
+    chamaValidacao(){
         if(!this.validaTamanho()) return false;
         if(!this.validaSequencia()) return false;
 
         this.cpfAnalise = this.deletaDigitoValidacao();
         this.cpfArray = this.converteCpfArray();
         this.addNumVerificador()
-    
         if(!this.comparaCpf()) return false;
-        console.log('CPF aceito');
+  
+        //console.log('CPF aceito');
+        return true;
     }
 
     validaTamanho() {
@@ -51,9 +52,8 @@ class ValidaCpf {
         let i = 0;
         let total = 0
 
-        
         for(let multiplicador = contador + 1; multiplicador >=2; multiplicador--){ 
-            total = total + multiplicador * this.cpfArray[i];
+            total = total + multiplicador * Number(this.cpfArray[i]);
             i++;
             //console.log(`multiplicador = ${multiplicador}`)
             //console.log('total = ', total);
@@ -78,8 +78,8 @@ class ValidaCpf {
 }
 
 
-const validaCpf = new ValidaCpf('070.987.720-03');
-validaCpf.chamaValidação();
+//const validaCpf = new ValidaCpf('070.987.720-03');
+//validaCpf.chamaValidacao();
 
 
 
