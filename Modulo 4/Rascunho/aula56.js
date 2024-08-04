@@ -86,16 +86,44 @@
 //     console.log('teste d');
 //     return 'valor final';
 // }
-//
+
 // let g1 = geradora1()
-//
-// //TESTE CASO 1
-// console.log(g1.next());
-// console.log(g1.next());
-// console.log(g1.next());
-// console.log(g1.next());
-//
+
+// // //TESTE CASO 1
+// // console.log(g1.next());
+// // console.log(g1.next());
+// // console.log(g1.next());
+// // console.log(g1.next());
+
 // //TESTE CASO 2
-// // for (let valor of g1){
-// //     console.log(valor);
-// // }
+// for (let valor of g1){
+//     console.log(valor);
+// }
+
+
+// //Sem função geradora
+// function gerarRandom(){
+//     return Math.random();
+// }
+// for (let i = 1; i <=10; i++){
+//     console.log(gerarRandom());
+//}
+
+// //Com função geradora
+// function* gerarAleatorio(){
+//     while (true){
+//        yield Math.random(); 
+//     }
+// }
+
+// const aleatorio = gerarAleatorio();
+// let i = 1;
+// while (true){
+//     console.log(aleatorio.next())
+//     i++;
+//     if(i >= 10){
+//         break;
+//     }
+    
+// }
+
